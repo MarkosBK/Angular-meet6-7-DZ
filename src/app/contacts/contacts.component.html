@@ -1,0 +1,22 @@
+<li class="list-group-item">
+  <b>Name:</b> {{apptype.Name}}
+</li>
+
+<li class="list-group-item">
+  <b>Email:</b> {{apptype.Email}}
+</li>
+
+<li class="list-group-item">
+  <b>Phone:</b> {{apptype.PhoneNumber}}
+</li>
+
+<li class="list-group-item">
+  <b>City:</b> {{apptype.City}}
+</li>
+
+<li class="list-group-item">
+  <b>Links:</b>
+  <div class="d-flex">
+    <a class="pr-2 bold" *ngFor="let key of apptype.Links.keys()" href="{{apptype.Links.get(key)}}">{{key}}</a>
+  </div>
+</li>
