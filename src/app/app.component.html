@@ -22,12 +22,11 @@
 
 <div class="container mx-auto pt-5 d-flex flex-wrap justify-content-between">
   <div *ngFor="let item of this.Summaries; let i = index" class="card mb-5" style="max-width: 540px;">
-
     <div class="row no-gutters">
       <div class="col-md-6" style="border-right: 1px solid black;">
         <img src="{{item.Photo}}" class="card-img-top" alt="img">
         <div class="card-body p-2">
-          <h5 class="card-title m-1">{{item.Name}}</h5>
+          <h5 class="card-title m-1">{{item.Name | uppercase}}</h5>
           <p class="card-text m-1">{{item.Skills}}</p>
         </div>
       </div>
@@ -37,12 +36,7 @@
           <app-skills [apptype]="this.Summaries[i]"></app-skills>
           <app-work-exp [apptype]="this.Summaries[i]"></app-work-exp>
         </ul>
-
       </div>
     </div>
-
-
-
-
   </div>
 </div>
